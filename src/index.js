@@ -9,7 +9,7 @@ class HelloWorldComponent extends Component {
   constructor() {
     super();
     this.state = {
-      title: "Wepback-React Boilerpltae"
+      title: "Wepback-React Boilerplate"
     };
   }
   render() {
