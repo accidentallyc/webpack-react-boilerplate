@@ -20,21 +20,33 @@ npm run build  # bundle up the scripts
 ```
 
 ## Testing
-Since people prefer different test frameworks, here are the different ways to set it up. Note that in this setup, all the tests should be in the same folder as the test
+Since people prefer different test frameworks, here are the different ways to set it up. 
+_All_ tests should be placed in the `src` folder beside the file it is testing.
+
+For example, this is how it would look
+```
+$ ls src/service/Router.js
+Router.js    Router.test.js
+```
 
 ### Mocha + Chai
 
 Installing the test framework
 ```
-npm install mocha chai
+npm install mocha chai @babel/register
 ```
 
 Running the test framework
 ```
-mocha "./src/**/*.test.js" --require chai/register-expect # Expect pattern
-mocha "./src/**/*.test.js" --require chai/register-assert # Assert pattern
+mocha "./src/**/*.test.js" --require chai/register-expect --require @babel/register # Expect pattern
+mocha "./src/**/*.test.js" --require chai/register-assert --require @babel/register # Assert pattern
 ```
 
+### TODO
+
+* Add jasmine, jest, and junit instructions
 
 ### Requests and PRs
 Feel free to request an addition to the boilerplate, or send a pr.
+
+
