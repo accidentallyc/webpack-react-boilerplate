@@ -2,6 +2,12 @@
 
 This boilerplate contains a working react-webpack setup. The src/index.js is the entry point and dist/bundle.js is the output file.
 
+# Includes
+
+* SASS Loader (css, scss)
+* JSX Loader (js, jsx)
+
+
 ## Installation
 ```
 git clone git@github.com:accidentallyc/webpack-react-boilerplate.git myproject
