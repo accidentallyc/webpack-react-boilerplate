@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './index.css';
+import './index.scss';
 
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
