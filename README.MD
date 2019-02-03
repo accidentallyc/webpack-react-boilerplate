@@ -42,6 +42,15 @@ mocha "./src/**/*.test.js" --require chai/register-expect --require @babel/regis
 mocha "./src/**/*.test.js" --require chai/register-assert --require @babel/register # Assert pattern
 ```
 
+### Lazy Man's Update to package.json.
+*WARNING* this replaces the `npm test` field, and replaces all the line spaces with 2.
+Replace the command as you see fit.
+
+```
+ command='mocha "./src/**/*.test.js" --require chai/register-expect --require @babel/register';
+ r=require,fs=r('fs'),p=r('./package.json');p.scripts.test=command;fs.writeFileSync('./package.json',JSON.stringify(p,null,2));
+```
+
 ### TODO
 
 * Add jasmine, jest, and junit instructions
